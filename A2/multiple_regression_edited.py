@@ -31,7 +31,7 @@ def derivative(theta, data, j):
     last = n - 1
     for x in range(0, m):
         sum += (hypothesis(theta, data[x, :-1]) - data[x, last]) * data[x, j]
-    return (sum / (2.0 * m))[0,0]
+    return (sum / m)[0,0]
     
 def saveThetaToFile(filename, iteration_number, cost, theta):
     f = open(filename, "a+")
